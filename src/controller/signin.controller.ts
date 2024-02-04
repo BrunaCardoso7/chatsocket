@@ -3,19 +3,13 @@ import { findallservice, signinServices } from "../services/signin.services";
 
 import bcrypt from 'bcrypt';
 import { tokenGenerate } from "../config/token.config";
+import { validateLogin } from "../validations/signin.validation";
 
 export const signinController = async (req: Request, res: Response) => {
     try {
         const { username, password } = req.body;
-
-        if (!username && !password) {
-            console.log('operation incompleted')
-        }
-
-        if (username === undefined || password === undefined) {
-            console.log('Operation incomplete');
-            return res.status(400).json({ error: 'Both username and password are required.' });
-        }
+ 
+        validateLogin({ username, password })
         
         const userSignin = await signinServices({ username });
         
