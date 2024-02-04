@@ -1,5 +1,3 @@
-import mongoose from "mongoose"
+import { User } from "../model/user.model"
 
-export const userSigninServices = () => {
-    
-}
+export const userSignupServices = async ( body: any ) => User.create(body);
