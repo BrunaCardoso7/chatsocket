@@ -4,8 +4,10 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
+    "@types/bcrypt": "^5.0.2",
     "@types/mongodb": "^4.0.7",
     "@types/mongoose": "^5.11.97",
+    "bcrypt": "^5.1.1",
     "cors": "^2.8.5",
     "dotenv": "^16.4.1",
     "express": "^4.18.2",
