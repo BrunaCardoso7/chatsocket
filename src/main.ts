@@ -2,6 +2,7 @@ import express from 'express';
 import { createServer } from 'http';
 import dotenv from 'dotenv' ;
 import cors from 'cors'
+import './db/conn.db' 
 
 dotenv.config()
 
