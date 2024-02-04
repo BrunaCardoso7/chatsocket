@@ -1,5 +1,3 @@
-import { userSchema } from './../model/user.model';
-import { ObjectId } from "mongodb";
 import { User } from "../model/user.model";
 
 interface UserInterface {

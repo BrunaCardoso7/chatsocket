@@ -1,6 +1,6 @@
 import { Router } from "express";
-import { signinController, userFindAll } from "../../controller/signin.controller";
-import { authMiddleware } from "../../middleware/auth.middleware";
+import { signinController, userFindAll } from "../../../controller/http/signin.controller";
+import { authMiddleware } from '../../../middleware/auth.middleware';
 
 const signinRouter = Router();
 

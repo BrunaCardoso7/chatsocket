@@ -1,9 +1,9 @@
 import { Request, Response } from "express";
-import { findallservice, signinServices } from "../services/signin.services";
+import { findallservice, signinServices } from "../../services/signin.services";
 
 import bcrypt from 'bcrypt';
-import { tokenGenerate } from "../config/token.config";
-import { validateLogin } from "../validations/signin.validation";
+import { tokenGenerate } from "../../config/token.config";
+import { validateLogin } from "../../validations/signin.validation";
 
 export const signinController = async (req: Request, res: Response) => {
     try {
