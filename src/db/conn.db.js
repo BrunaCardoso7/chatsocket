@@ -18,7 +18,7 @@ dotenv_1.default.config();
 const secret = process.env.PASSWORD;
 const db = () => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        yield mongoose_1.default.connect(`mongodb+srv://obitadrawing:${secret}@cluster0.tknmry0.mongodb.net/?retryWrites=true&w=majority`);
+        yield mongoose_1.default.connect(`mongodb+srv://obitadrawing:3QvqHzS0kMrnytQa@cluster0.57qp771.mongodb.net/?retryWrites=true&w=majority`);
         console.log(`Conexão bem-sucedida ao banco de dados`);
     }
     catch (error) {
