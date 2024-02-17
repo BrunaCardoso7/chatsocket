@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { findallservice, signinServices } from "../../services/signin.services";
+import { findallservice, signinServices } from "../../services/http/signin.services";
 
 import bcrypt from 'bcrypt';
 import { tokenGenerate } from "../../config/token.config";

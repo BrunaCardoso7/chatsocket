@@ -1,7 +1,7 @@
 import { Request, Response, NextFunction } from 'express';
 import jwt, { JwtPayload, Secret } from 'jsonwebtoken';
 import dotenv from 'dotenv';
-import { findByIdService } from '../services/signin.services';
+import { findByIdService } from '../services/http/signin.services';
  
 dotenv.config()
 
