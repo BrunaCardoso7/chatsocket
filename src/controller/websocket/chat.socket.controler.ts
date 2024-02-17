@@ -3,7 +3,7 @@ import { chatPrivateService } from "../../services/websocket/chat.ws.service";
 import { chatDataProps } from "../../services/websocket/chat.ws.service";
 
 export const chatPrivateControler = (socket: Socket) => {
-    console.log('user conneted', socket)
+    // console.log('user conneted', socket)
     socket.on('chatprivate', async (data: chatDataProps) => {
         try {
             if(!data){
