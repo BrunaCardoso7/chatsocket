@@ -12,4 +12,4 @@ export const chatPrivateService = async ( data: chatDataProps ) => {
     } catch (error) {
         console.error(error, 'falha no armazenamento da mensagem')
     }
-}
+}   

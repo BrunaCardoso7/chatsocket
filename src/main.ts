@@ -8,8 +8,9 @@ import bodyParser = require('body-parser');
 import registerRoute from './routes/http/signup/signup.route';
 import signinRouter from './routes/http/signin/signin.route';
 import { Namespace, Server } from 'socket.io';
-// import { ioNamespace } from './routes/websocket/chat.route.socket';
+// import { ioNamespace } from './routes/websocket/chat.route.socket';  
 import { chatPrivateControler } from './controller/websocket/chat.socket.controler';
+import { routeVerify } from './config/token.config';
 
 const app = express();
 dotenv.config();
@@ -31,6 +32,7 @@ app.use('/user', registerRoute);
 app.use('/user', signinRouter);
 
 export const ioNamespace: Namespace = io.of('/chat')
+ioNamespace.use(routeVerify)
 ioNamespace.on('connection', chatPrivateControler)
 
 httpServer.listen(PORT, () => {

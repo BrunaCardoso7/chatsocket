@@ -3,8 +3,6 @@ import dotenv from 'dotenv'
 
 dotenv.config()
 
-const secret = process.env.PASSWORD
-
 const db = async () => {
     try {
         await mongoose.connect(`mongodb+srv://obitadrawing:3QvqHzS0kMrnytQa@cluster0.57qp771.mongodb.net/?retryWrites=true&w=majority`);

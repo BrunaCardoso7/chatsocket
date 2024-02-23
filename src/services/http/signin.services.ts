@@ -6,9 +6,7 @@ interface UserInterface {
 
 export const signinServices = async ( body: UserInterface ) => {
     try {
-
         const { username } = body
-
         const user =  await User.findOne({ username }).select('+password')
         return user;
     } catch (error) {
